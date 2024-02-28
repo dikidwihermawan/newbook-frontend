@@ -2,7 +2,7 @@ import React from "react";
 
 function index(props) {
   return (
-    <div className="px-4 py-4 space-y-4">
+    <div className="px-4 py-4 space-y-4 antialiased tracking-tight">
       <h2>Recenty Follows</h2>
       <div className="flex items-center space-x-4">
         <img
