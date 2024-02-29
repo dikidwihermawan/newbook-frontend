@@ -4,7 +4,7 @@ import Comment from "./comment";
 
 function index(props) {
   return (
-    <div className="space-y-12">
+    <div className="space-y-4">
       <FormStatus />
       <Comment />
     </div>

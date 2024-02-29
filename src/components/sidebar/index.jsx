@@ -8,7 +8,7 @@ import React from "react";
 
 function sidebar(props) {
   return (
-    <ul className="rounded-lg border border-gray-300 shadow-lg bg-white overflow-hidden divide-y divide-gray-100">
+    <ul className="rounded-lg shadow-lg bg-white overflow-hidden divide-y divide-gray-100">
       <li className="hover:text-white hover:bg-blue-600 px-4 py-2">
         <button
           type="button"

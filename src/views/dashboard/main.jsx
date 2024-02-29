@@ -2,7 +2,7 @@ import { IconHome, IconSettings, IconUser } from "@tabler/icons-react";
 import React from "react";
 import Status from "../../components/status";
 import RecentFollow from "../../components/recent-follow";
-import Sidebar from "./sidebar";
+import Sidebar from "../../components/sidebar";
 
 function main() {
   return (
