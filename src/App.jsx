@@ -1,7 +1,9 @@
 import Dashboard from "./views/dashboard";
+import Login from "./views/auth";
 
 function App() {
-  return <Dashboard />;
+  return <Login />;
+  // return <Dashboard />;
 }
 
 export default App;

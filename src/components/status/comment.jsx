@@ -1,6 +1,18 @@
-import { IconHeart, IconMessageCircle } from "@tabler/icons-react";
+import { IconHeart, IconMessageCircle, IconSend } from "@tabler/icons-react";
+import { useEffect, useRef, useState } from "react";
 
 function Comment() {
+  const textAreaRef = useRef(null);
+  const [body, setBody] = useState("");
+
+  const handleChange = (event) => {
+    setBody(event.target.value);
+  };
+
+  useEffect(() => {
+    textAreaRef.current.style.height = "auto";
+    textAreaRef.current.style.height = textAreaRef.current.scrollHeight + "px";
+  }, [body]);
   return (
     <div className="bg-white md:space-x-4 md:space-y-4 px-4 py-4 rounded-lg shadow-xl">
       <div className="grid grid-cols-12 gap-4">
@@ -13,6 +25,7 @@ function Comment() {
           />
         </div>
         <div className="col-span-10 md:col-span-11 space-y-2">
+          {/* First comment */}
           <p className="text-sm font-semibold">Diki Dwi Hermawan</p>
           <p className="text-xs text-gray-600">5 Hours ago</p>
           <p className="text-xs tracking-tight antialiased">
@@ -45,32 +58,27 @@ function Comment() {
               </button>
             </div>
           </div>
-          <div className="grid grid-cols-12 space-x-6 text-xs">
-            <div className="col-span-1 md:col-span-1">
+          {/* End FirstComment */}
+          <form action="#" method="post">
+            <div className="flex space-x-4 text-xs items-start">
               <img
                 src="https://i.pravatar.cc/30"
-                alt=""
-                srcset=""
-                className="rounded-full border border-gray-300"
+                className="items-start rounded-full lg:ml-0 border border-gray-100"
+                alt="image"
               />
+              <textarea
+                ref={textAreaRef}
+                value={body}
+                onChange={handleChange}
+                rows={1}
+                placeholder="Write a comment"
+                className="w-full py-2 overflow-hidden resize-none text-xs rounded-sm border-b border-gray-300 focus:outline-none focus:border-b focus:border-blue-300"
+              />
+              <button type="submit">
+                <IconSend size={20} stroke={1} strokeLinejoin="miter" />
+              </button>
             </div>
-            <div className="col-span-11 w-full">
-              <form action="#" method="post">
-                <textarea
-                  name="comment1"
-                  placeholder="Write a comment"
-                  className="border-b border-gray-300 focus:outline-none resize-none"
-                ></textarea>
-                <button
-                  type="button"
-                  className="w-full flex items-center space-x-1"
-                >
-                  <IconHeart size={20} stroke={1} strokeLinejoin="miter" />
-                  <span>1K</span>
-                </button>
-              </form>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

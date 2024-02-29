@@ -5,7 +5,9 @@ function header() {
     <header className="grid items-center bg-gradient-to-r from-blue-400 to-blue-500 px-4 py-2 h-14 text-white">
       <div className="flex items-center justify-between">
         <div className="">
-          <h2 className="font-recursive">Newbie ORG</h2>
+          <a href="/" className="font-recursive">
+            Newbie ORG
+          </a>
         </div>
         <button
           data-drawer-target="default-sidebar"
@@ -29,7 +31,7 @@ function header() {
             ></path>
           </svg>
         </button>
-        <div className="hidden md:visible md:flex items-center font-recursive text-xs gap-4">
+        <div className="hidden md:visible md:flex items-center text-xs gap-4">
           <a href="#">Login</a>
           <a href="#">Register</a>
         </div>
