@@ -1,3 +1,9 @@
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandTwitter,
+} from "@tabler/icons-react";
+
 function Login() {
   return (
     <div className="grid grid-cols-6 place-content-center min-h-screen bg-gray-100">
@@ -11,7 +17,7 @@ function Login() {
             />
           </div>
           <div className="col-span-6">
-            <div class="p-20 h-full grid content-center items-center space-y-4">
+            <div class="px-10 h-full grid content-center items-center space-y-4">
               <span className="text-center text-xl font-bold">
                 Hello Again!
               </span>
@@ -42,16 +48,48 @@ function Login() {
                     Recovery Password
                   </a>
                 </div>
-                <div className="py-4">
+                <div className="py-2">
                   <button
                     type="submit"
-                    className="w-full text-xs rounded-lg text-white px-4 py-2 bg-gradient-to-r from-blue-400 to-blue-600"
+                    className="w-full text-xs rounded-lg text-white px-4 py-2 bg-gradient-to-tl from-blue-600 to-blue-200"
                   >
                     Login
                   </button>
                 </div>
-                <div className="px-2 text-xs text-center">Or sign in with</div>
               </form>
+              <div className="px-2 text-xs text-center">Or sign in with</div>
+              <div className="flex items-center text-center justify-between px-20">
+                <a
+                  href="#"
+                  className="border p-2 rounded-xl bg-gradient-to-br from-blue-600 to-blue-200 text-white"
+                >
+                  <IconBrandFacebook
+                    size={20}
+                    stroke={1}
+                    strokeLinejoin="miter"
+                  />
+                </a>
+                <a
+                  href="#"
+                  className="border p-2 rounded-xl bg-gradient-to-br from-blue-600 to-blue-200 text-white"
+                >
+                  <IconBrandTwitter
+                    size={20}
+                    stroke={1}
+                    strokeLinejoin="miter"
+                  />
+                </a>
+                <a
+                  href="#"
+                  className="border p-2 rounded-xl bg-gradient-to-br from-blue-600 to-blue-200 text-white"
+                >
+                  <IconBrandInstagram
+                    size={20}
+                    stroke={1}
+                    strokeLinejoin="miter"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
