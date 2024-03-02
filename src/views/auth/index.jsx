@@ -31,7 +31,7 @@ function Login() {
                     name="username"
                     id="username"
                     placeholder="Enter username"
-                    className="w-full text-xs px-4 py-2 focus:outline-none rounded-lg border border-gray-100"
+                    className="w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-gray-300"
                   />
                 </div>
                 <div className="py-2">
@@ -40,18 +40,18 @@ function Login() {
                     name="password"
                     id="password"
                     placeholder="Password"
-                    className="w-full text-xs px-4 py-2 focus:outline-none rounded-lg border border-gray-100"
+                    className="w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-gray-300"
                   />
                 </div>
                 <div className="py-2 text-end">
-                  <a href="#" className="text-xs">
+                  <a href="#" className="text-xs text-blue-400">
                     Recovery Password
                   </a>
                 </div>
                 <div className="py-2">
                   <button
                     type="submit"
-                    className="w-full text-xs rounded-lg text-white px-4 py-2 bg-gradient-to-tl from-blue-600 to-blue-200"
+                    className="w-full text-xs rounded-lg text-white px-4 py-2 bg-gradient-to-b from-blue-200 to-blue-600"
                   >
                     Login
                   </button>
@@ -61,7 +61,7 @@ function Login() {
               <div className="flex items-center text-center justify-between px-20">
                 <a
                   href="#"
-                  className="border p-2 rounded-xl bg-gradient-to-br from-blue-600 to-blue-200 text-white"
+                  className="border p-2 rounded-lg bg-gradient-to-b from-blue-600 to-blue-200 text-white"
                 >
                   <IconBrandFacebook
                     size={20}
@@ -71,7 +71,7 @@ function Login() {
                 </a>
                 <a
                   href="#"
-                  className="border p-2 rounded-xl bg-gradient-to-br from-blue-600 to-blue-200 text-white"
+                  className="border p-2 rounded-lg bg-gradient-to-b from-blue-600 to-blue-200 text-white"
                 >
                   <IconBrandTwitter
                     size={20}
@@ -81,7 +81,7 @@ function Login() {
                 </a>
                 <a
                   href="#"
-                  className="border p-2 rounded-xl bg-gradient-to-br from-blue-600 to-blue-200 text-white"
+                  className="border p-2 rounded-lg bg-gradient-to-b from-blue-600 to-blue-200 text-white"
                 >
                   <IconBrandInstagram
                     size={20}
