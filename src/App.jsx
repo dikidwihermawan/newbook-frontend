@@ -1,9 +1,7 @@
-import Dashboard from "./views/dashboard";
-import Login from "./views/auth";
+import Router from "./views/router";
 
 function App() {
-  return <Login />;
-  // return <Dashboard />;
+  return <Router />;
 }
 
 export default App;

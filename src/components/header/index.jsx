@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function header() {
   return (
@@ -32,8 +33,8 @@ function header() {
           </svg>
         </button>
         <div className="hidden md:visible md:flex items-center text-xs gap-4">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/register">Register</NavLink>
         </div>
       </div>
     </header>
