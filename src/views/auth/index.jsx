@@ -4,7 +4,15 @@ import {
   IconBrandTwitter,
 } from "@tabler/icons-react";
 
+import axios from "axios";
+
 function Login() {
+  const login = async (e) => {
+    e.preventDefault();
+    const response = await axios.post("login");
+    console.log(response);
+  };
+
   return (
     <>
       <div className="hidden xl:block">
@@ -26,7 +34,7 @@ function Login() {
                   <span className="text-center text-sm">
                     Welcome back you've been missed!
                   </span>
-                  <form action="#" method="post">
+                  <form onSubmit={login} method="post">
                     <div className="py-2">
                       <input
                         type="text"
