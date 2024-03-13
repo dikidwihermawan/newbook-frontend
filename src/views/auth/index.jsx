@@ -114,7 +114,7 @@ function Login() {
           <span className="text-center text-sm">
             Welcome back you've been missed!
           </span>
-          <form action="#" method="post">
+          <form onSubmit={login} method="post">
             <div className="py-2">
               <input
                 type="text"

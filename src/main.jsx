@@ -5,7 +5,7 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://127.0.0.1:8000";
+axios.defaults.baseURL = "http://127.0.0.1:8000/api";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
