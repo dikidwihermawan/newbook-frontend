@@ -1,16 +1,28 @@
+import axios from "axios";
+import { useState } from "react";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandTwitter,
 } from "@tabler/icons-react";
 
-import axios from "axios";
-
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const credentials = {
+    email,
+    password,
+  };
+
   const login = async (e) => {
     e.preventDefault();
-    const response = await axios.post("login");
-    console.log(response);
+    try {
+      const response = await axios.post("login", credentials);
+      console.log(response.data);
+    } catch (e) {
+      console.log(e.response.data);
+    }
   };
 
   return (
@@ -37,6 +49,10 @@ function Login() {
                   <form onSubmit={login} method="post">
                     <div className="py-2">
                       <input
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                        }}
                         type="text"
                         name="username"
                         id="username"
@@ -46,6 +62,10 @@ function Login() {
                     </div>
                     <div className="py-2">
                       <input
+                        value={password}
+                        onChange={(e) => {
+                          setPassword(e.target.value);
+                        }}
                         type="password"
                         name="password"
                         id="password"
