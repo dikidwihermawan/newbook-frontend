@@ -7,11 +7,11 @@ import {
 } from "@tabler/icons-react";
 
 function Login() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const credentials = {
-    email,
+    username,
     password,
   };
 
@@ -49,9 +49,9 @@ function Login() {
                   <form onSubmit={login} method="post">
                     <div className="py-2">
                       <input
-                        value={email}
+                        value={username}
                         onChange={(e) => {
-                          setEmail(e.target.value);
+                          setUsername(e.target.value);
                         }}
                         type="text"
                         name="username"
@@ -60,6 +60,7 @@ function Login() {
                         className="w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-gray-300"
                       />
                     </div>
+                    <div className="text-xs text-red-300">Username kosong</div>
                     <div className="py-2">
                       <input
                         value={password}
@@ -73,6 +74,7 @@ function Login() {
                         className="w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-gray-300"
                       />
                     </div>
+                    <div className="text-xs text-red-300">Username kosong</div>
                     <div className="py-2 text-end">
                       <a href="#" className="text-xs text-blue-400">
                         Recovery Password
@@ -137,6 +139,10 @@ function Login() {
           <form onSubmit={login} method="post">
             <div className="py-2">
               <input
+                value={username}
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                }}
                 type="text"
                 name="username"
                 id="username"
@@ -146,6 +152,10 @@ function Login() {
             </div>
             <div className="py-2">
               <input
+                value={password}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
                 type="password"
                 name="password"
                 id="password"
