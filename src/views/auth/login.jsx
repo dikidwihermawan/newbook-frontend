@@ -9,6 +9,7 @@ import {
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState([]);
 
   const credentials = {
     username,
@@ -21,7 +22,7 @@ function Login() {
       const response = await axios.post("login", credentials);
       console.log(response.data);
     } catch (e) {
-      console.log(e.response.data);
+      setErrors(e.response.data.errors);
     }
   };
 
@@ -30,7 +31,7 @@ function Login() {
       <div className="hidden xl:block">
         <div className="grid grid-cols-6 place-content-center min-h-screen bg-gray-100">
           <div className="col-start-2 col-span-4 border border-gray-300 rounded-lg w-full overflow-hidden shadow-xl">
-            <div className="grid grid-cols-12 p-2 bg-gradient-to-r from-white to-blue-50 ">
+            <div className="grid grid-cols-12 p-2 bg-gradient-to-r from-white to-blue-50">
               <div className="col-span-6">
                 <img
                   src="../../public/bear.png"
@@ -38,8 +39,8 @@ function Login() {
                   alt="People who knows"
                 />
               </div>
-              <div className="col-span-6 ">
-                <div class="px-10 h-full grid content-center items-center space-y-4">
+              <div className="col-span-6">
+                <div className="px-10 h-full grid content-center items-center space-y-4">
                   <span className="text-center text-xl font-bold">
                     Hello Again!
                   </span>
@@ -57,10 +58,20 @@ function Login() {
                         name="username"
                         id="username"
                         placeholder="Enter username"
-                        className="w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-gray-300"
+                        className={
+                          errors.username
+                            ? "w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-red-300"
+                            : "w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-gray-300"
+                        }
                       />
                     </div>
-                    <div className="text-xs text-red-300">Username kosong</div>
+                    {errors.username ? (
+                      <div className="text-xs text-red-300">
+                        {errors.username[0]}
+                      </div>
+                    ) : (
+                      ""
+                    )}
                     <div className="py-2">
                       <input
                         value={password}
@@ -71,10 +82,20 @@ function Login() {
                         name="password"
                         id="password"
                         placeholder="Password"
-                        className="w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-gray-300"
+                        className={
+                          errors.password
+                            ? "w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-red-300"
+                            : "w-full text-xs px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300 rounded-lg border border-gray-300"
+                        }
                       />
                     </div>
-                    <div className="text-xs text-red-300">Username kosong</div>
+                    {errors.password ? (
+                      <div className="text-xs text-red-300">
+                        {errors.password[0]}
+                      </div>
+                    ) : (
+                      ""
+                    )}
                     <div className="py-2 text-end">
                       <a href="#" className="text-xs text-blue-400">
                         Recovery Password
@@ -131,7 +152,7 @@ function Login() {
         </div>
       </div>
       <div className="lg:hidden grid place-content-center min-h-screen">
-        <div class="px-10 grid space-y-4">
+        <div className="px-10 grid space-y-4">
           <span className="text-center text-xl font-bold">Hello Again!</span>
           <span className="text-center text-sm">
             Welcome back you've been missed!

@@ -51,8 +51,8 @@ function Register() {
                   alt="People who knows"
                 />
               </div>
-              <div className="col-span-6 ">
-                <div class="px-10 h-full grid content-center items-center space-y-4">
+              <div className="col-span-6">
+                <div className="px-10 h-full grid content-center items-center space-y-4">
                   <span className="text-center text-xl font-bold">
                     Register
                   </span>
@@ -231,7 +231,7 @@ function Register() {
         </div>
       </div>
       <div className="lg:hidden grid place-content-center min-h-screen">
-        <div class="px-10 grid space-y-4">
+        <div className="px-10 grid space-y-4">
           <span className="text-center text-xl font-bold">Hello Again!</span>
           <span className="text-center text-sm">
             Welcome back you've been missed!
