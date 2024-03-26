@@ -9,7 +9,6 @@ function index(props) {
           <img
             src="https://i.pravatar.cc/30"
             alt=""
-            srcset=""
             className="rounded-full border border-gray-300"
           />
         </div>
@@ -31,7 +30,7 @@ function index(props) {
           <img
             src="https://i.pravatar.cc/30"
             alt=""
-            srcset=""
+            srcSet=""
             className="rounded-full border border-gray-300"
           />
         </div>
@@ -53,7 +52,7 @@ function index(props) {
           <img
             src="https://i.pravatar.cc/30"
             alt=""
-            srcset=""
+            srcSet=""
             className="rounded-full border border-gray-300"
           />
         </div>
@@ -75,7 +74,7 @@ function index(props) {
           <img
             src="https://i.pravatar.cc/30"
             alt=""
-            srcset=""
+            srcSet=""
             className="rounded-full border border-gray-300"
           />
         </div>
@@ -97,7 +96,7 @@ function index(props) {
           <img
             src="https://i.pravatar.cc/30"
             alt=""
-            srcset=""
+            srcSet=""
             className="rounded-full border border-gray-300"
           />
         </div>

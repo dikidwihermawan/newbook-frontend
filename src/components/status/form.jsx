@@ -6,7 +6,6 @@ function FormStatus() {
           <img
             src="https://i.pravatar.cc/30"
             alt=""
-            srcset=""
             className="hidden md:block rounded-full"
           />
           <div className="w-full text-right">

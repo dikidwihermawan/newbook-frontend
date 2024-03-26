@@ -20,7 +20,6 @@ function Comment() {
           <img
             src="https://i.pravatar.cc/30"
             alt=""
-            srcset=""
             className="rounded-full border border-gray-300"
           />
         </div>

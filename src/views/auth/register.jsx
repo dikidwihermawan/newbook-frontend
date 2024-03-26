@@ -31,7 +31,6 @@ function Register() {
     try {
       const response = await axios.post("register", credentials);
       redirect("/login");
-      console.log(response.data);
     } catch (e) {
       setErrors(e.response.data.errors);
       console.log(e.response.data.errors);

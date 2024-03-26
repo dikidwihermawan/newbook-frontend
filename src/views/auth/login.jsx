@@ -1,15 +1,20 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandTwitter,
 } from "@tabler/icons-react";
+import { useDispatch } from "react-redux";
+import { authenticated } from "../../store/authSlice";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
+  const dispatch = useDispatch();
+  const redirect = useNavigate();
 
   const credentials = {
     username,
@@ -20,7 +25,9 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.post("login", credentials);
-      console.log(response.data);
+      localStorage.setItem("tokenUser", response.data.token);
+      dispatch(authenticated(response.data));
+      redirect("/");
     } catch (e) {
       setErrors(e.response.data.errors);
     }
