@@ -1,20 +1,20 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandTwitter,
 } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { authenticated } from "../../store/authSlice";
-import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
-  const dispatch = useDispatch();
   const redirect = useNavigate();
+  const dispatch = useDispatch();
 
   const credentials = {
     username,

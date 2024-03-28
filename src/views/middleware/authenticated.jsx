@@ -11,6 +11,7 @@ const Authenticated = ({ children }) => {
       redirect("/login");
     }
   }, [userAuth[0].active]);
+
   return children;
 };
 
