@@ -1,12 +1,12 @@
 import React from "react";
-import FormStatus from "./form";
-import Comment from "./comment";
+import { FormStatus } from "./FormStatus";
+import { Statusbar } from "./Statusbar";
 
-function index(props) {
+function index() {
   return (
     <div className="space-y-4">
       <FormStatus />
-      <Comment />
+      <Statusbar />
     </div>
   );
 }
